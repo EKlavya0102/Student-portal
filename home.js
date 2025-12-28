@@ -1,4 +1,4 @@
-/* ==================================================
+/* 
    HOME PAGE JAVASCRIPT
 // Section toggling (future-proof)
 // Attendance from localStorage OR fallback value
@@ -7,7 +7,8 @@
 // Sidebar active highlight
 // JS-based hover animations
 // JSON fetch support
-   ================================================== */
+  
+  */
 
 document.addEventListener("DOMContentLoaded", () => {
 
@@ -30,9 +31,8 @@ document.addEventListener("DOMContentLoaded", () => {
   window.showSection = showSection;
 
 
-  /* ----------------------------------------------
-     ATTENDANCE (LocalStorage based)
-     ---------------------------------------------- */
+  /* ATTENDANCE (LocalStorage based) */
+
   function loadAttendance() {
     const storedData = localStorage.getItem("attendance");
 
@@ -63,9 +63,7 @@ document.addEventListener("DOMContentLoaded", () => {
   loadAttendance();
 
 
-  /* ----------------------------------------------
-     DEFAULT ATTENDANCE (fallback)
-     ---------------------------------------------- */
+  /* DEFAULT ATTENDANCE (fallback) */
   const DEFAULT_ATTENDANCE = 82;
 
   const attendanceCircle = document.getElementById("attendanceCircle");
@@ -85,9 +83,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
 
-  /* ----------------------------------------------
-     PERFORMANCE STATUS
-     ---------------------------------------------- */
+  /* PERFORMANCE STATUS */
   function updatePerformance(percent) {
     const performanceText = document.querySelector(".dash-card h2.good");
 
@@ -106,9 +102,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
 
-  /* ----------------------------------------------
-     SIDEBAR ACTIVE STATE
-     ---------------------------------------------- */
+  /* SIDEBAR ACTIVE STATE */
   const sidebarItems = document.querySelectorAll(".sidebar li");
 
   sidebarItems.forEach(item => {
@@ -118,9 +112,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
 
-  /* ----------------------------------------------
-     DASHBOARD CARD HOVER (JS-based)
-     ---------------------------------------------- */
+  /* DASHBOARD CARD HOVER (JS-based)*/
   document.querySelectorAll(".dash-card").forEach(card => {
     card.addEventListener("mouseenter", () => {
       card.style.transform = "translateY(-4px)";
@@ -134,9 +126,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
 
-  /* ----------------------------------------------
-     FETCH DATA FROM JSON (optional feature)
-     ---------------------------------------------- */
+  /* FETCH DATA FROM JSON (optional feature) */
   fetch("data.json")
     .then(response => {
       if (!response.ok) throw new Error("HTTP Error: " + response.status);
@@ -158,9 +148,8 @@ document.addEventListener("DOMContentLoaded", () => {
     .catch(error => console.error("Error loading JSON:", error));
 
 
-  /* ----------------------------------------------
-     DEBUG
-     ---------------------------------------------- */
+  /* DEBUG */
   console.log("🏠 Home page JS loaded successfully");
 
 });
+
