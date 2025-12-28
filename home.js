@@ -1,5 +1,12 @@
 /* ==================================================
    HOME PAGE JAVASCRIPT
+// Section toggling (future-proof)
+// Attendance from localStorage OR fallback value
+// Dynamic attendance circle
+// Performance auto-calculation
+// Sidebar active highlight
+// JS-based hover animations
+// JSON fetch support
    ================================================== */
 
 document.addEventListener("DOMContentLoaded", () => {
