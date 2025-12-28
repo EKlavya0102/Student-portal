@@ -64,6 +64,16 @@ body {
   z-index: 10;
 }
 
+logoutBtn {
+  margin-top: 20px;
+  background: #dc2626;
+}
+
+logoutBtn:hover {
+  background: #b91c1c;
+}
+
+
 .nav-right {
   display: flex;
   align-items: center;
